@@ -11,11 +11,13 @@ Create Go script that uses the Seed words found in the game to scan the address'
 
 ### Go get Skycoin & HappyWonderGame
 `go get github.com/skycoin/skycoin/...`
-
-`go get github.com/Cryptovinnie/HappyWonderGame/...`
-
 This will download `github.com/skycoin/skycoin` to `$GOPATH/src/github.com/skycoin/skycoin`
-
+```
+mkdir -p $GOPATH/src/github.com/Cryptovinnie
+cd $GOPATH/src/github.com/Cryptovinnie
+git clone https://github.com/Cryptovinnie/HappyWonderGame.git
+cd HappyWonderGame
+```
 and `github.com/Cryptovinnie/HappyWonderGame` to `$GOPATH/src/github.com/Cryptovinnie/HappyWonderGame`
 
 
