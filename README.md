@@ -20,6 +20,9 @@ cd HappyWonderGame
 ```
 and `github.com/Cryptovinnie/HappyWonderGame` to `$GOPATH/src/github.com/Cryptovinnie/HappyWonderGame`
 
-
-
+## Install Skycoin-CLI
+```
+$ cd $GOPATH/src/github.com/skycoin/skycoin/cmd/cli
+$ ./install.sh
+```
 
