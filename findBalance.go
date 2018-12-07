@@ -37,7 +37,10 @@ type AddressBalances struct {
 
 func main() {
 	stop := ""
+	var loopNumber = 0
+	fmt.Println(loopNumber)
 	for stop != "1" {
+		fmt.Println("------------------------------------")
 		var twelveWordSeed [12]string //array with 12 dimensions
 		var seedString string
 		words := strings.Fields(testSeed)
@@ -52,7 +55,7 @@ func main() {
                 add := 12 - wordlength  //how many words to add
                 fmt.Println("Amount of words to add", add)
                 // add in words to make seed 12.
-                addWordsToSeed := addSeedWords(add)//get new words here
+                addWordsToSeed := orderSeedWords(loopNumber)//get new words here
                 fmt.Println("addSeedWords: ", addWordsToSeed)
 				
 				//for loop to enter addwords to seed
@@ -88,6 +91,7 @@ func main() {
 	} else {
 		fmt.Println("Balance is Zero: ", positiveBalance)
 		stop = "0"
+		loopNumber ++
 	}
 
 
@@ -105,6 +109,17 @@ func addSeedWords(n int) []string {
         name = append(name, random[randomnumber])
         sum ++
 }
+return name 
+}
+
+func orderSeedWords(n int) []string {
+	
+	var name []string
+	random := LinesInFile("Wordlist.txt")
+	randomnumber := n
+	fmt.Println("Number Seq: ", randomnumber)
+	name = append(name, random[randomnumber])
+
 return name 
 }
 
