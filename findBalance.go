@@ -64,17 +64,18 @@ func main() {
 				fmt.Println("updatedWords:    ", words)
 			}
 		
-				for i := 0; i < 12; i++ {
+				for i := 0; i != 11; i++ {
 				twelveWordSeed[i] = words[i]
 				seedString += words[i] + " "
 				}
+				seedString += words[11]
 			} else {
 				seedString = testSeed
 			}
 
 	
- fmt.Println("Entered Seed:    ", testSeed)
- fmt.Println("Seed String:    ", seedString)
+ fmt.Println("Entered Seed L:", len(testSeed))
+ fmt.Println("Seed String L:", len(seedString))
  fmt.Println("Address: ", recoverWalletAddressFromSeed(seedString))
 	
  jsonResp := string(getAddressBalance(recoverWalletAddressFromSeed(seedString)))
